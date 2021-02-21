@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require("axios");
 
-export default (baseUrl) => {
+module.exports = (baseUrl) => {
   return axios.create({
     baseURL: baseUrl,
   });

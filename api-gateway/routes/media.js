@@ -1,9 +1,11 @@
 const express = require("express");
 const router = express.Router();
+const { create, getAll, remove } = require("./handlers/media");
 
-/* GET users listing. */
-router.get("/", function (req, res) {
-  res.send("respond with a resource");
-});
+router.post("/", create);
+
+router.get("/", getAll);
+
+router.delete("/:id", remove);
 
 module.exports = router;
